@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css" />
+  <title>Portfolio</title>
+</head>
+
+<body class="dark">
+  <header class="header">
+    <div class="switches">
+      <div id="toggle-theme" class="toggle-theme">
+        <img id="toggle-icon" src="assets/icons/moon.svg" alt="icon theme" class="toggle-theme_icon">
+        <p id="toggle-text" class="toggle-theme_text">Dark Mode</p>
+      </div>
+    </div>
+    <div id="toggle-colors" class="colors">
+      <div data-color="hsl(214, 84%, 56%)" class="colors_item colors_item--blue"></div>
+      <div data-color="hsl(150, 84%, 56%)" class="colors_item colors_item--green"></div>
+      <div data-color="hsl(276, 84%, 56%)" class="colors_item colors_item--purple"></div>
+      <div data-color="hsl(40, 84%, 56%)" class="colors_item colors_item--orange"></div>
+    </div>
+  </header>
+  <h1 class="title">MI PORTFOLIO</h1>
+  <main class="main">
+    <section class="column column--left">
+      <article class="card card--profile">
+        <div class="card_image-container">
+          <img src="assets/images/profile.jpg" alt="">
+        </div>
+        <div class="card_header">
+          <h2 class="card_title">
+            Facundo Cantarutti
+          </h2>
+          <p class="card_subtitle">Software developer</p>
+        </div>
+        <div class="card_body">
+          <div class="card_link">
+            <i class="fas fa-envelope icon"></i>
+            <a href="mailto:facundocantarutti@gmail.com"> facundocantarutti@gmail.com</a>
+          </div>
+          <div class="card_link">
+            <i class="fas fa-phone-alt icon"></i>
+            <a href="tel:2616426947">+54 9 261 642-6947</a>
+          </div>
+          <p class="card_text">
+            [PH]text
+          </p>
+        </div>
+      </article>
+    </section>
+    <section class="column column--right">
+      <article class="card">
+        <h2 class="card_title">Front End</h2>
+        <div class="skills">
+          <div class="skills_item">
+            <p class="skills_tech">HTML</p>
+            <div class="skills_bar skills_bar--70"></div>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>
