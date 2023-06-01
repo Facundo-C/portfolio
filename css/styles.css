@@ -5,6 +5,7 @@
     --bg-card-color: hsl(0, 0%, 98%);
     --transition: color 0.1s, background-color 0.2s ease-in-out;
     --boder-radius: 0.4em;
+    --skills-bar-length: 0%;
 }
 
 * {
@@ -36,6 +37,11 @@ body.dark {
 }
 
 .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -100,6 +106,8 @@ body.dark {
 }
 
 .title{
+    margin-top: 75px;
+    margin-bottom: 0;
     text-align: center;
     color: var(--primary-color);
     transition: var(--transition);
@@ -108,6 +116,7 @@ body.dark {
 .main{
     display: grid;
     padding: 2em;
+    gap: 0.5em
 }
 
 .column{
@@ -123,6 +132,7 @@ body.dark {
     .column--right{
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, min-content);
+        align-items: start;
     }
 }
 
@@ -166,19 +176,89 @@ body.dark {
     padding: 1em 0;
 }
 
+.skills_header{
+    display: flex;
+    justify-content: space-between;
+    width: 175px;
+    margin-left: auto;
+}
+
+.skills_tech{
+    margin: 0;
+    font-size: 0.8rem;
+}
+
 .skills_item{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 0.5em;
 }
 
-.skills_bar{
+.skills_bar,
+.skills_bar::after{
+    position: relative;
     width: 175px;
     height: 8px;
     background-color: #888;
     border-radius: var(--boder-radius);
+    overflow: hidden;
+}
+
+.skills_bar::after{
+    content: '';
+    position: absolute;
+    left: -175px;
+    background-color: var(--primary-color);
+    transition: var(--transition);
+    animation: skills-bar-fill 2s ease-in-out forwards;
+}
+
+.skills_bar--10::after{
+    --skills-bar-length: 10%;
+}
+
+.skills_bar--20::after{
+    --skills-bar-length: 20%;
+}
+
+.skills_bar--30::after{
+    --skills-bar-length: 30%;
+}
+
+.skills_bar--40::after{
+    --skills-bar-length: 40%;
+}
+
+.skills_bar--50::after{
+    --skills-bar-length: 50%;
+}
+
+.skills_bar--60::after{
+    --skills-bar-length: 60%;
+}
+.skills_bar--70::after{
+    --skills-bar-length: 70%;
+}
+
+.skills_bar--80::after{
+    --skills-bar-length: 80%;
+}
+
+.skills_bar--90::after{
+    --skills-bar-length: 90%;
+}
+
+.skills_bar--100::after{
+    --skills-bar-length: 100%;
 }
 
 .icon{
     margin-right: 1em;
+}
+
+@keyframes skills-bar-fill {
+    to {
+        transform: translateX(var(--skills-bar-length));
+    }
 }
