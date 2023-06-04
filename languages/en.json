@@ -1,0 +1,26 @@
+{
+    "profile": {
+        "rol": "Software Developer",
+        "text": "here goes a text"
+    },
+    "experience": {
+        "title": "Experience",
+        "time-1": "2019 - 2022",
+        "e-1": "Student",
+        "text-1":"here goes a text"
+    },
+    "hobbies": {
+        "title-1": "here goes a hobby title",
+        "text-1": "and it's text"
+    },
+    "skills": {
+        "title-1": "Front End",
+        "sub-1": "Years of experience"
+    },
+    "projects": {
+        "button": "Code",
+        "1-name": "Portfolio",
+        "1-text": "here goes a text"
+
+    }
+}

@@ -7,15 +7,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="css/styles.css" />
-  <title>Portfolio</title>
+  <title data-section="projects" data-value="1-name">Portfolio</title>
 </head>
 
 <body class="dark">
+  <!-- Header -->
   <header class="header">
     <div class="switches">
       <div id="toggle-theme" class="toggle-theme">
         <img id="toggle-icon" src="assets/icons/moon.svg" alt="icon theme" class="toggle-theme_icon">
         <p id="toggle-text" class="toggle-theme_text">Dark Mode</p>
+      </div>
+    </div>
+    <div id="flags" class="flags">
+      <div class="flags_item" data-language="es">
+        <img src="assets/icons/es.svg" alt="" class="flags_img">
+      </div>
+      <div class="flags_item" data-language="en">
+        <img src="assets/icons/gb.svg" alt="" class="flags_img">
       </div>
     </div>
     <div id="toggle-colors" class="colors">
@@ -25,9 +34,11 @@
       <div data-color="hsl(40, 84%, 56%)" class="colors_item colors_item--orange"></div>
     </div>
   </header>
-  <h1 class="title">MI PORTFOLIO</h1>
+  <!-- Body -->
   <main class="main">
+    <!-- Left -->
     <section class="column column--left">
+      <!-- Left-Profile -->
       <article class="card card--profile">
         <div class="card_image-container">
           <img src="assets/images/profile.jpg" alt="">
@@ -36,7 +47,7 @@
           <h2 class="card_title">
             Facundo Cantarutti
           </h2>
-          <p class="card_subtitle">Software developer</p>
+          <p class="card_subtitle" data-section="profile" data-value="rol">Software developer</p>
         </div>
         <div class="card_body">
           <div class="card_link">
@@ -47,22 +58,48 @@
             <i class="fas fa-phone-alt icon"></i>
             <a href="tel:2616426947">+54 9 261 642-6947</a>
           </div>
-          <p class="card_text">
+          <p class="card_text" data-section="profile" data-value="text">
             [PH]text
           </p>
         </div>
       </article>
+      <!-- Left-Experience -->
       <article class="card card--experience">
-        <h2 class="card_title">Experiencias</h2>
+        <h2 class="card_title" data-section="experience" data-value="title">Experience</h2>
+        <!-- Experience-Estudiante/Student -->
         <div class="experience">
           <img src="assets/images/logo.png" alt="logo" class="experience_image">
+          <div class="experience_info">
+            <p class="experience_time" data-section="experience" data-value="time-1">
+              2019 - 2022
+            </p>
+            <h3 class="experience_job" data-section="experience" data-value="e-1">Student</h3>
+            <p class="experience_description" data-section="experience" data-value="text-1">
+              [PH]Info
+            </p>
+          </div>
         </div>
+
+      </article>
+      <!-- Left-Hobbies -->
+      <article class="card card--hobbies">
+        <h2 class="card_title">Hobbies</h2>
+        <!-- Hobbies-[PH]Hobby -->
+        <div class="card_image-container hobby_img">
+          <img src="assets/images/hobbie.jpg" alt="[PH]Hobby">
+        </div>
+        <h3 class="hobbie_title" data-section="hobbies" data-value="title-1">[PH]Hobbie Title</h3>
+        <p class="card_text" data-section="hobbies" data-value="text-1">[PH]Hobbie Text</p>
+
       </article>
     </section>
+    <!-- Right -->
     <section class="column column--right">
+      <!-- Right-Skills -->
+      <!-- Skills-Front End -->
       <article class="card">
-        <h2 class="card_title">Front End</h2>
-        <small>Años de experiencia</small>
+        <h2 class="card_title" data-section="skills" data-value="title-1">Front End</h2>
+        <small data-section="skills" data-value="sub-1">Years of experience</small>
         <div class="skills">
         <div class="skills_header">
           <span class="skills_start-level">0</span>
@@ -80,8 +117,32 @@
             <p class="skills_tech">JavaScript</p>
             <div class="skills_bar skills_bar--30"></div>
           </div>
+
         </div>
       </article>
+
+      <!-- Right-Projects -->
+      <!-- Projects-Portfolio -->
+      <article class="card card--project">
+        <div class="card_image-container">
+          <img src="assets/images/Project-porfolio.png" alt="[PH]Project" class="card_image">
+        </div>
+        <div class="project">
+          <div class="project_tags">
+            <span class="project_tag">#HTML</span>
+            <span class="project_tag">#CSS</span>
+            <span class="project_tag">#JavaScript</span>
+            <span class="project_tag">#Responsive</span>
+          </div>
+          <h2 class="card_title" data-section="projects" data-value="1-name">Portfolio</h2>
+          <p class="card_text" data-section="projects" data-value="1-text">[PH]Portfolio Text</p>
+          <div class="buttons">
+            <a href="https://facundo-c.github.io/portfolio/" class="button button--primary">Demo</a>
+            <a href="https://github.com/Facundo-C/portfolio" class="button button--ghost" data-section="projects" data-value="button">Code</a>
+          </div>
+        </div>
+      </article>
+      
     </section>
   </main>
   <script src="js/scripts.js"></script>

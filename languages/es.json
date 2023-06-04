@@ -1,0 +1,26 @@
+{
+    "profile": {
+        "rol": "Desarrollador de Software",
+        "text": "aqui va un texto"
+    },
+    "experience": {
+        "title": "Experiencia",
+        "time-1": "2019 - 2022",
+        "e-1": "Estudiante",
+        "text-1":"aqui va un texto"
+    },
+    "hobbies": {
+        "title-1": "aqui va el titulo de un hobby",
+        "text-1": "y su texto"
+    },
+    "skills": {
+        "title-1": "Front End",
+        "sub-1": "Años de experiencia"
+    },
+    "projects": {
+        "button": "Código",
+        "1-name": "Portafolios",
+        "1-text": "aqui va un texto"
+
+    }
+}
