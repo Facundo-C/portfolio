@@ -44,10 +44,24 @@ phoneNumber.addEventListener('click', () => {
     alert('¡Número de teléfono copiado al portapapeles!');
 });
 
-function limpiarFormulario() {
+function enviarFormulario(event) {
+    event.preventDefault();
+
+    var nombre = document.getElementById("nombre").value;
+    var email = document.getElementById("email").value;
+    var mensaje = document.getElementById("mensaje").value;
+
+    var cuerpoCorreo = "Nombre: " + nombre + "\n" +
+        "Email: " + email + "\n" +
+        "Mensaje: " + mensaje;
+
+
+    var linkCorreo = "mailto:facundocantarutti@gmail.com" +
+        "?subject=Contacto desde el formulario" +
+        "&body=" + encodeURIComponent(cuerpoCorreo);
+
+
+    window.open(linkCorreo);
+
     document.getElementById("miFormulario").reset();
 }
-
-document.getElementById("miFormulario").addEventListener("submit", function() {
-    limpiarFormulario();
-  });

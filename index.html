@@ -53,7 +53,8 @@
             <span class="phone-number">+54 9 261 642-6947</span>
           </div>
           <p class="card_text" data-section="profile" data-value="text">
-            Soy Facundo mi pasion es la tecnologia, me encuentro siempre en busca de resultados distintos, logicamente haciendo cosas diferentes. Me encanta trabajar en equipo en busqueda de optimos resultados.
+            Soy Facundo mi pasion es la tecnologia, me encuentro siempre en busca de resultados distintos, logicamente
+            haciendo cosas diferentes. Me encanta trabajar en equipo en busqueda de optimos resultados.
           </p>
         </div>
       </article>
@@ -62,7 +63,8 @@
         <h2 class="card_title" data-section="experience" data-value="title">Experience</h2>
         <!-- Experience-Estudiante/Student -->
         <div class="experience">
-          <img src="http://ies9008.mendoza.edu.ar/pluginfile.php/1/core_admin/logo/0x200/1683168328/190x298.jpg" alt="[PH]logo" class="experience_image">
+          <img src="http://ies9008.mendoza.edu.ar/pluginfile.php/1/core_admin/logo/0x200/1683168328/190x298.jpg"
+            alt="[PH]logo" class="experience_image">
           <div class="experience_info">
             <p class="experience_time" data-section="experience" data-value="time-1">
               2019 - 2022
@@ -218,13 +220,13 @@
       <!-- Formulario de contacto -->
       <div class="contact-form">
         <h3>Contacto</h3>
-        <form id="miFormulario" action="php/send.php" method="POST">
-            <input type="text" name="nombre" placeholder="Nombre" required>
-            <input type="email" name="email" placeholder="Correo electrónico" required>
-            <textarea name="mensaje" placeholder="Mensaje" required></textarea>
-            <button type="submit">Submit</button>
+        <form id="miFormulario">
+          <input type="text" id="nombre" placeholder="Nombre" required>
+          <input type="email" id="email" placeholder="Correo electrónico" required>
+          <textarea id="mensaje" placeholder="Mensaje" required></textarea>
+          <button type="submit" onclick="enviarFormulario(event)">Enviar</button>
         </form>
-    </div>
+      </div>
       <!-- Copyright -->
       <p class="footer-text">© 2023 Mi Sitio Web. Todos los derechos reservados.</p>
     </div>
