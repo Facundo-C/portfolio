@@ -1,5 +1,5 @@
 :root {
-    --primary-color: hsl(214, 84%, 56%);
+    --primary-color: hsl(276, 84%, 56%);
     --text-color: hsl(0, 0%, 31%);
     --bg-color: hsl(0, 0%, 90%);
     --bg-card-color: hsla(0, 0%, 98%, 0.9);
@@ -8,6 +8,7 @@
     --skills-bar-length: 0%;
 }
 
+
 * {
     box-sizing: border-box;
 }
@@ -15,6 +16,11 @@
 a {
     color: var(--primary-color);
     text-decoration: none;
+}
+
+.phone-number {
+    color: var(--primary-color);
+    cursor: pointer;
 }
 
 img {
@@ -34,27 +40,32 @@ body.dark {
     --text-color: hsl(0, 0%, 83%);
     --bg-color: hsl(0, 0%, 15%);
     --bg-card-color: hsla(0, 0%, 20%, 0.9);
+    --primary-color: hsl(214, 84%, 56%);
 }
 
 .header {
     position: sticky;
-    top: 0;
+    top: 5%;
     left: 0;
+    right: 0;
     justify-content: space-between;
-    width: 100%;
+    width: auto;
     z-index: 9999;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     height: 75px;
     padding: 0 1.5em;
     background-color: var(--bg-card-color);
     transition: var(--transition);
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 20px;
 }
 
 .switches {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 1px;
 }
 
 .toggle-theme {
@@ -74,14 +85,19 @@ body.dark {
 }
 
 .flags {
+    border: 2px solid var(--primary-color);
+    transition: var(--transition);
     width: 75px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 1px;
 }
 
 .flags_item {
-    width: 30px;
+    width: 25px;
 }
 
 .flags_img {
@@ -89,40 +105,8 @@ body.dark {
     cursor: pointer;
 }
 
-.colors {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 20px;
-    width: 100px;
-}
-
-.colors_item {
-    width: 20px;
-    height: 20px;
-    border: 1px solid var(--text-color);
-    background-color: var(--primary-color);
-    cursor: pointer;
-}
-
-.colors_item--blue {
-    --primary-color: hsl(214, 84%, 56%);
-}
-
-.colors_item--green {
-    --primary-color: hsl(150, 84%, 56%);
-}
-
-.colors_item--purple {
-    --primary-color: hsl(276, 84%, 56%);
-}
-
-.colors_item--orange {
-    --primary-color: hsl(40, 84%, 56%);
-}
-
 .main {
-    margin-top: -20px;
+    margin-top: -50px;
     display: grid;
     padding: 2em;
     gap: 0.5em
@@ -394,4 +378,24 @@ body.dark {
     to {
         transform: translateX(var(--skills-bar-length));
     }
+}
+
+.footer {
+    background-color: var(--bg-card-color);
+    transition: var(--transition);
+    padding: 20px 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-text {
+    text-align: center;
+    margin-top: 20px;
 }
